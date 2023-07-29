@@ -1,0 +1,22 @@
+.single_video_container{
+	display: grid;
+	grid-template-areas: 
+		"sidebar main main aside"
+	;
+}
+
+.sidebar{
+	grid-area: sidebar;
+	border: 1px solid red;
+}
+
+.main{
+	border: 1px solid green;
+	grid-area: main;
+}
+
+.aside{
+	border: 1px solid blue;
+	grid-area: aside;
+}
+

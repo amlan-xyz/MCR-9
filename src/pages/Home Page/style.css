@@ -1,0 +1,46 @@
+.home_container{
+	display: grid;
+	grid-template-areas: 
+		"sidebar  categories categories categories"
+	;
+	margin: 2rem 5rem;
+}
+
+.sidebar{
+	/* width: 100%; */
+	background-color: aqua;
+	grid-area: sidebar;
+	position: sticky;
+	height: 100dvh;
+	min-width: 250px;
+}
+
+.categories{
+	grid-area: categories;
+	border: 1px solid red;
+	padding: 0 2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card {
+	margin-right: 2rem;
+	margin-top: 2rem;
+	padding: 0.5rem;
+	height: 300px;
+	width: 300px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card_img {
+	width: 280px;
+	height: 200px;
+  }
+  .card_body {
+	padding: 0.5rem;
+  }
+  
+  .card_body p,
+  h4 {
+	margin-bottom: 0.5rem;
+  }

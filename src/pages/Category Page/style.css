@@ -1,0 +1,41 @@
+.category_videos_container{
+	display: grid;
+	grid-template-areas: 
+		"sidebar videos videos videos"
+	;
+	margin: 2rem 5rem;
+}
+
+.sidebar{
+	grid-area: sidebar;
+}
+
+.videos{
+	grid-area: videos;
+	margin-left: 3rem;
+}
+
+.videos ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.videos li{
+	margin-right: 2rem;
+}
+
+.selected_category{
+	margin-bottom: 2rem;
+}
+
+.category_card{
+	padding: 1rem;
+	width: 300px;
+	height: 250px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.category_card img{
+	height: 150px;
+	width: 270px;
+}
