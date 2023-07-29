@@ -1,18 +1,21 @@
 .explore{
-	display: grid;
-	grid-template-columns: 
-		"sidebar videos videos videos"
+	display: flex;
+	margin-top: 2rem;
 }
 
-.explore .sidebar{
-	grid-area: sidebar;
+.explore input{
+	margin-top: 1rem;
+	padding: .6rem;
 }
 
-.explore_videos{
-	grid-area: videos;
+.videos{
+	display: flex;
+	flex-wrap: wrap;
 }
 
-
+.videos li{
+	margin: 1rem 2rem;
+}
 
 .category_card{
 	padding: 1rem;
