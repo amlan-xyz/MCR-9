@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: #317EEB;
+  --secondary-color: #2764BA;
+  --body-color: #E0E0E0;
+  --box-color: white;
+}
+
 ul{
   list-style: none;
 }

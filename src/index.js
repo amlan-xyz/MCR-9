@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import {CategoryContext,CategoryContextProvider} from './context/categoryContext'
 import { VideosContext,VideosContextProvider } from './context/videoContext';
+import { PlaylistContext,PlaylistContextProvider } from './context/playlistContext';
 
 import {BrowserRouter as Router} from 'react-router-dom'
 
-export {CategoryContext,VideosContext};
+export {CategoryContext,VideosContext,PlaylistContext};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,10 @@ root.render(
     <Router>
       <CategoryContextProvider>
         <VideosContextProvider>
-        <App />
+          <PlaylistContextProvider>
+            <App />
+          </PlaylistContextProvider>
+
         </VideosContextProvider>
       </CategoryContextProvider>
 

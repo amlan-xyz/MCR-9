@@ -1,8 +1,13 @@
 import { useEffect,useContext } from "react"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import {CategoryContext, VideosContext} from '../../index'
 
 import { Card } from "./Card";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faHome,faCompass,faList,faClock} from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 
 import './style.css'
 
@@ -20,15 +25,15 @@ export function Categories(){
 	return (
 		<div className="category_videos_container">
 			<ul className="sidebar">
-				<li>Home</li>
-				<li>Explore</li>
-				<li>Playlist</li>
-				<li>Watch Later</li>
+			<li><Link style={{textDecoration:'none'}} to='/'><FontAwesomeIcon icon={faHome} /> Home</Link></li>
+				<li><Link to='/explore' style={{textDecoration:'none'}}><FontAwesomeIcon icon={faCompass} />  Explore</Link></li>
+				<li><Link to='/playlist' style={{textDecoration:'none'}}><FontAwesomeIcon icon={faList} />  Playlist</Link></li>
+				<li><Link  style={{textDecoration:'none'}}><FontAwesomeIcon icon={faClock} /> Watch Later</Link> </li>
 			</ul>
 			
 
 			<div className="videos">
-			<p className='selected_category'>{selectedCategory}</p>
+			<header className='selected_category'>{selectedCategory}</header>
 			<ul >
 			{
 					allVideos.map(item=>{

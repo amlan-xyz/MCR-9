@@ -26,12 +26,13 @@
 
 .selected_category{
 	margin-bottom: 2rem;
+	font-size: 2rem;
 }
 
-.category_card{
+.videos .category_card{
 	padding: 1rem;
 	width: 300px;
-	height: 250px;
+	height: 280px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
