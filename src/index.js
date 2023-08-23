@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import {CategoryContext,CategoryContextProvider} from './context/categoryContext'
-import { VideosContext,VideosContextProvider } from './context/videoContext';
-import { PlaylistContext,PlaylistContextProvider } from './context/playlistContext';
-
 import {BrowserRouter as Router} from 'react-router-dom'
 
-export {CategoryContext,VideosContext,PlaylistContext};
+import { CategoryContext,CategoryContextProvider } from './context/CategoryContext';
+import { VideosContext,VideosContextProvider } from './context/VideosContext';
+import { WatchlaterContext,WatchlaterContextProvider } from './context/WatchLaterContext';
+import { PlaylistContext,PlaylistContextProvider } from './context/PlaylistContext';
+import { ExploreContext,ExploreContextProvider } from './context/ExploreContext';
+import { SingleVideoContext,SingleVideoContextProvider } from './context/SingleVideoContext';
+import { NotesContext,NotesContextProvider } from './context/NotesContext';
+
+export {CategoryContext,VideosContext,WatchlaterContext,PlaylistContext,ExploreContext,SingleVideoContext,NotesContext};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,15 +21,20 @@ root.render(
     <Router>
       <CategoryContextProvider>
         <VideosContextProvider>
-          <PlaylistContextProvider>
-            <App />
-          </PlaylistContextProvider>
-
+          <WatchlaterContextProvider>
+            <PlaylistContextProvider>
+              <ExploreContextProvider>
+                <SingleVideoContextProvider>
+                  <NotesContextProvider>
+                    <App />
+                  </NotesContextProvider>
+                </SingleVideoContextProvider>
+              </ExploreContextProvider>
+            </PlaylistContextProvider>
+          </WatchlaterContextProvider>
         </VideosContextProvider>
       </CategoryContextProvider>
-
     </Router>
-
   </React.StrictMode>
 );
 

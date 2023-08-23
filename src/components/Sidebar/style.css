@@ -1,0 +1,31 @@
+.sidebar{
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: var(--background-color);
+	position: fixed;
+	width: 350px;
+}
+
+.sidebar_body{
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar_item{
+	margin-bottom: 2rem;
+	font-size: 1.3rem;
+	font-weight: 500;
+	display: flex;
+}
+
+.sidebar_link{
+	text-decoration: none;
+	color: black;
+}
+
+.sidebar_icon{
+	margin-right: 1rem;
+	font-size: 1.5rem;
+}

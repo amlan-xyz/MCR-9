@@ -1,0 +1,38 @@
+.playlist{
+	margin-left: 350px;
+	padding: 0 3rem;
+	min-width: 980px;
+}
+
+
+.playlist_header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.playlist_list{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.playlist_details{
+	color: var(--text-color);
+	font-size: 1.2rem;
+}
+
+.playlist_card{
+	display: flex;
+	box-shadow: var(--shadow);
+	padding: .5rem 1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.playlist_card button{
+	margin-left: 1rem;
+}
+
+
+

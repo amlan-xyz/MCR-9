@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
-import { Route,Routes } from 'react-router-dom';
+import {Routes,Route,useNavigate} from 'react-router-dom'
 
-import {Home} from './pages/Home Page/Home'
-import { Categories } from './pages/Category Page/Category';
-import { Video } from './pages/Single Video Page/Video';
-import { Navbar } from './components/Navbar/Navbar';
-import { Explore } from './pages/Explore Page/Explore';
-import { Playlist } from './pages/Playlist Page/Playlist';
+import { Categories } from './pages/Categories/Category';
+import { Videos } from './pages/VideoListings/Videos';
+import { WatchLater } from './pages/WatchLater/WatchLater';
+import { Playlist } from './pages/Playlist/Playlist';
+import { Explore } from './pages/Explore/Explore';
+import { SingleVideo } from './pages/SingleVideo/SingleVideo';
+import { SinglePlaylist } from './pages/SinglePlaylist/SinglePlaylist';
 
 function App() {
   return (
     <div className="App">
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/category/:id' element={<Categories/>} />
-          <Route path='/video/:id' element={<Video/>} />
-          <Route path='/explore' element={<Explore/>} />
-          <Route path='/playlist' element={<Playlist/>} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Categories/>}/>
+        <Route path='/videos/:category' element={<Videos/>} />
+        <Route path='/watch-later' element={<WatchLater/>} />
+        <Route path='/playlist' element={<Playlist/>} />
+        <Route path='/explore' element={<Explore/>} />
+        <Route path='/video/:id' element={<SingleVideo/>} />
+        <Route path='/playlist/:id' element={<SinglePlaylist/>} />
+      </Routes>
     </div>
   );
 }

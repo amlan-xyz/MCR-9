@@ -1,23 +1,63 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --main-color: #317EEB;
-  --secondary-color: #2764BA;
-  --body-color: #E0E0E0;
-  --box-color: white;
-}
-
-ul{
-  list-style: none;
-}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+.modal_wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+}
+
+
+.modal_container {
+  position: fixed;
+  min-width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:.5rem;
+}
+ .modal_header{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal_icon{
+  background-color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.modal_button{
+  width: max-content;
+}
+
+.modal_body{
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_body label{
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.modal_body input{
+  outline: none;
+  padding: .8rem ;
+  border: 1px solid var(--accent); 
 }
 
 @media (prefers-reduced-motion: no-preference) {

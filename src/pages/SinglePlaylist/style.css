@@ -1,0 +1,10 @@
+.single_playlist{
+	margin-left: 380px;
+	width:1000px;
+}
+
+.single_playlist ul{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 1rem;
+}
